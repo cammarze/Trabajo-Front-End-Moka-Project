@@ -1,3 +1,4 @@
+
 *::after
 *::before
 *{
@@ -12,6 +13,7 @@ body {
   padding: 0;
   font-family: 'Lato';
   color: black;
+  
 }
 
 main {
@@ -35,7 +37,21 @@ img{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 30px 0 40px;
+    padding: 30px 0 10px;
+}
+header h1 {
+    font-family: serif;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
 }
 
 nav ul {
@@ -67,22 +83,72 @@ nav ul li a:hover {
 }
 
 
-.container-items{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+.container-items,
 .container-items2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
+
 .item{
+
     border-radius: 10px;
     max-width: 300px;
     margin: auto;
 }
+
+
+
+@media (max-width: 768px){
+  .container-items,
+  .container-items2 {
+    grid-template-columns: repeat(2, 1fr); 
+    width: 100%;
+  }
+
+  .item{
+   max-width: 100%;
+   width: 100%;
+  }
+  .item img{
+    width: 100%; 
+    height: auto;
+  }
+
+  header {
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin: 0;
+  }
+  nav ul{
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+    nav ul li {
+    text-align: center;
+    width: 100%;
+  }
+    main {
+    padding: 0 10px; 
+  }
+    .contacto {
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+}
+
+
 
 .item:hover{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
@@ -94,6 +160,8 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    font-family: "Cambria";
+
 }
 
 .item img{
@@ -116,6 +184,7 @@ nav ul li a:hover {
 .price{
     font-size: 18px;
     font-weight: 900;
+    font-family: "Arial";
 }
 
 .info button{
@@ -125,7 +194,10 @@ nav ul li a:hover {
     color: white;
     padding: 5px 10px;
     cursor: pointer;
+    font-family: "Cambria";
 }
+
+
 
 .contacto{
     background-color: white;
@@ -133,7 +205,8 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-width: 400px;
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 
 .contacto-titulo {
