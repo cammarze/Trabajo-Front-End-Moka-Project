@@ -1,4 +1,3 @@
-
 *::after
 *::before
 *{
@@ -13,15 +12,20 @@ body {
   padding: 0;
   font-family: 'Lato';
   color: black;
+  background-color: #f5efdc;
   
 }
+
 
 main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
+} 
 
+html {
+    scroll-behavior: smooth;
+}
 
  .icon {
     width: 40px;
@@ -35,24 +39,91 @@ img{
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0 10px;
+   
+  justify-content: space-between;
+  /* padding: 30px 0 10px; */
+  display: flex;
+  justify-content:flex;
+  /* align-items: center; */
+  padding: 10px 20px;
+  background-color:#f5efdc ;
+
 }
+
 header h1 {
-    font-family: serif;
+    color: black;
+    /* -webkit-text-stroke: 0.6px rgb(0, 0, 0);  */
+    font-family: 'Funky Bird PERSONAL USE';
+    font-weight: 500;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Funky Bird PERSONAL USE';
+    src: url('fonts/FunkyBirdPERSONALUSE-Regular.woff2') format('woff2'),
+        url('fonts/FunkyBirdPERSONALUSE-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .logo-container {
+  justify-self: start;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.iconos{
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
 .logo {
     width: 80px;
     height: auto;
 }
+
+.outlined {
+  font-size: 30px;
+  color: #1d1c1b;
+  margin: 0;
+  text-shadow: 1px 1px 1.5px rgba(16, 16, 16, 0.163);
+}
+
+.container-icon {
+  display: flex;
+  gap: 15px;
+}
+
+/* Sección banner principal */
+.banner {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Gloock';
+
+}
+.banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.iconos-arriba,
+.iconos-abajo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.icon {
+  width: 60px;
+  height: auto;
+}
+
 
 nav ul {
   list-style: none; 
@@ -83,6 +154,7 @@ nav ul li a:hover {
 }
 
 
+
 .container-items,
 .container-items2{
     display: grid;
@@ -92,10 +164,24 @@ nav ul li a:hover {
 
 
 .item{
-
     border-radius: 10px;
     max-width: 300px;
     margin: auto;
+}
+
+
+
+.icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.icon {
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -156,7 +242,7 @@ nav ul li a:hover {
 
 .info{
     padding: 15px 30px;
-    line-height: 1;
+    line-height: 0;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -188,13 +274,19 @@ nav ul li a:hover {
 }
 
 .info button{
-    border: none;
-    background: none;
-    background-color: rgb(103, 82, 60);
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-family: "Cambria";
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background 0.3s;
+  background-color: rgb(103, 82, 60);
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.info button:hover {
+  background-color: rgb(213, 195, 167);
+  color: rgb(103, 82, 60);
 }
 
 
