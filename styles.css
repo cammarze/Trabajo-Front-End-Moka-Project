@@ -208,6 +208,11 @@ nav ul li a:hover {
     gap: 10px;
     margin: 0;
   }
+ nav {
+      position: sticky;   
+      top: 0;            
+      z-index: 1000;       
+  }
   nav ul{
     align-items: center;
     gap: 10px;
