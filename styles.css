@@ -13,9 +13,7 @@ body {
   padding: 0;
   font-family: 'Lato';
   color: black;
-  
   background-color: #f5e8d0;
-  
 }
 
 
@@ -242,7 +240,7 @@ nav ul li a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
- .info {
+.info {
   padding: 15px 30px;
   line-height: 1.4;  
   display: flex;
