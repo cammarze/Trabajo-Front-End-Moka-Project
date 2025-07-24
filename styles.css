@@ -1,4 +1,3 @@
-
 *::after
 *::before
 *{
@@ -7,13 +6,18 @@
     box-sizing: border-box;
 
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Lato';
   color: black;
-  background-color: #f9f3eb;
+  background-color: #f8f5f0;
+  padding-top: 60px;
+
 }
 
 
@@ -41,18 +45,14 @@ img{
 header{
    
   justify-content: space-between;
-  /* padding: 30px 0 10px; */
   display: flex;
   justify-content:flex;
-  /* align-items: center; */
   padding: 10px 20px;
-  background-color: #f9f3eb;
-
+  background-color: #f8f5f0;
 }
 
 header h1 {
     color: black;
-    /* -webkit-text-stroke: 0.6px rgb(0, 0, 0);  */
     font-family: 'Funky Bird PERSONAL USE';
     font-weight: 500;
     text-align: center;
@@ -124,6 +124,11 @@ header h1 {
   height: auto;
 }
 
+nav {
+  position: sticky;   
+  top: 0;            
+  z-index: 1000;       
+}
 
 nav ul {
   list-style: none; 
@@ -170,7 +175,6 @@ nav ul li a:hover {
 }
 
 
-
 .icons-row {
   display: flex;
   justify-content: center;
@@ -178,10 +182,33 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
-
 .icon {
   width: 40px;
   height: 40px;
+}
+
+.info p {
+  margin: 5px 0;        /* reduce espacio superior e inferior */
+  line-height: 1;     /* interlineado más compacto */
+}
+
+.portada{
+  display: grid;
+
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0 px;
+  justify-items: center; 
+}
+.pic{
+  width: 100%;
+  max-width: 700px;
+  margin:0;
+}
+.pic img {
+  width: 100%;     
+  height: auto;     
+  border-radius: 20px;
 }
 
 
@@ -191,6 +218,14 @@ nav ul li a:hover {
   .container-items2 {
     grid-template-columns: repeat(2, 1fr); 
     width: 100%;
+  }
+
+  .portada {
+    grid-template-columns: 1fr; 
+    gap: 0px;
+  }
+  .pic {
+    flex: 1 1 100%;
   }
 
   .item{
@@ -207,11 +242,6 @@ nav ul li a:hover {
     text-align: center;
     gap: 10px;
     margin: 0;
-  }
- nav {
-      position: sticky;   
-      top: 0;            
-      z-index: 1000;       
   }
   nav ul{
     align-items: center;
@@ -245,7 +275,8 @@ nav ul li a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
-.info {
+
+ .info {
   padding: 15px 30px;
   line-height: 1.4;  
   display: flex;
@@ -300,9 +331,11 @@ nav ul li a:hover {
     padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 400px;
+    max-width: 600px;
     width: auto;
     height: auto;
+    margin: 50px auto;
+    
 }
 
 .contacto-titulo {
@@ -342,4 +375,5 @@ nav ul li a:hover {
 
 .contacto-formulario button:hover {
   background-color: #8a7a65;
+  
 }
