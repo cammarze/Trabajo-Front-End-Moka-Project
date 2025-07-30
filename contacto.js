@@ -1,19 +1,3 @@
-
-// const botonesCarrito = document.querySelectorAll('.info button');
-
-// const contadorProductos = document.getElementById('contador-productos');
-
-// let totalProductos = 0;
-
-
-// botonesCarrito.forEach((boton) => {
-//   boton.addEventListener('click', () => {
-//     totalProductos++; 
-//     contadorProductos.textContent = totalProductos; 
-//   });
-// });
-
-
 const formulario = document.querySelector('.contacto-formulario');
 
 formulario.addEventListener('submit', (e) => {
@@ -28,7 +12,7 @@ formulario.addEventListener('submit', (e) => {
     return;
   }
 
-  // email valido
+
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!regexEmail.test(email)) {
     alert('Por favor, ingresa un correo válido');
